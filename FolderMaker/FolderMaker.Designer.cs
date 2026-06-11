@@ -32,13 +32,14 @@
             this.LB_FileDestination = new System.Windows.Forms.Label();
             this.BTN_FindLocation = new System.Windows.Forms.Button();
             this.LB_NumberOfFolders = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TB_FolderAmount = new System.Windows.Forms.TextBox();
             this.CB_SubFolders = new System.Windows.Forms.CheckBox();
             this.GB_SubFolders = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TB_SubFolderName = new System.Windows.Forms.TextBox();
             this.LB_SubFolderName = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TB_FolderName = new System.Windows.Forms.TextBox();
             this.LB_FolderName = new System.Windows.Forms.Label();
+            this.BTN_CreateFolder = new System.Windows.Forms.Button();
             this.GB_SubFolders.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,16 +74,16 @@
             this.LB_NumberOfFolders.AutoSize = true;
             this.LB_NumberOfFolders.Location = new System.Drawing.Point(12, 152);
             this.LB_NumberOfFolders.Name = "LB_NumberOfFolders";
-            this.LB_NumberOfFolders.Size = new System.Drawing.Size(74, 13);
+            this.LB_NumberOfFolders.Size = new System.Drawing.Size(75, 13);
             this.LB_NumberOfFolders.TabIndex = 3;
-            this.LB_NumberOfFolders.Text = "Folder amount";
+            this.LB_NumberOfFolders.Text = "Folder Amount";
             // 
-            // textBox2
+            // TB_FolderAmount
             // 
-            this.textBox2.Location = new System.Drawing.Point(111, 149);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.TB_FolderAmount.Location = new System.Drawing.Point(111, 149);
+            this.TB_FolderAmount.Name = "TB_FolderAmount";
+            this.TB_FolderAmount.Size = new System.Drawing.Size(100, 20);
+            this.TB_FolderAmount.TabIndex = 4;
             // 
             // CB_SubFolders
             // 
@@ -97,21 +98,21 @@
             // 
             // GB_SubFolders
             // 
-            this.GB_SubFolders.Controls.Add(this.textBox4);
+            this.GB_SubFolders.Controls.Add(this.TB_SubFolderName);
             this.GB_SubFolders.Controls.Add(this.LB_SubFolderName);
             this.GB_SubFolders.Enabled = false;
             this.GB_SubFolders.Location = new System.Drawing.Point(17, 215);
             this.GB_SubFolders.Name = "GB_SubFolders";
-            this.GB_SubFolders.Size = new System.Drawing.Size(546, 187);
+            this.GB_SubFolders.Size = new System.Drawing.Size(546, 127);
             this.GB_SubFolders.TabIndex = 6;
             this.GB_SubFolders.TabStop = false;
             // 
-            // textBox4
+            // TB_SubFolderName
             // 
-            this.textBox4.Location = new System.Drawing.Point(104, 19);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(169, 20);
-            this.textBox4.TabIndex = 10;
+            this.TB_SubFolderName.Location = new System.Drawing.Point(104, 19);
+            this.TB_SubFolderName.Name = "TB_SubFolderName";
+            this.TB_SubFolderName.Size = new System.Drawing.Size(169, 20);
+            this.TB_SubFolderName.TabIndex = 10;
             // 
             // LB_SubFolderName
             // 
@@ -122,12 +123,12 @@
             this.LB_SubFolderName.TabIndex = 9;
             this.LB_SubFolderName.Text = "Sub-Folder Name";
             // 
-            // textBox3
+            // TB_FolderName
             // 
-            this.textBox3.Location = new System.Drawing.Point(111, 114);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(169, 20);
-            this.textBox3.TabIndex = 8;
+            this.TB_FolderName.Location = new System.Drawing.Point(111, 114);
+            this.TB_FolderName.Name = "TB_FolderName";
+            this.TB_FolderName.Size = new System.Drawing.Size(169, 20);
+            this.TB_FolderName.TabIndex = 8;
             // 
             // LB_FolderName
             // 
@@ -138,22 +139,35 @@
             this.LB_FolderName.TabIndex = 7;
             this.LB_FolderName.Text = "Folder Name";
             // 
+            // BTN_CreateFolder
+            // 
+            this.BTN_CreateFolder.Location = new System.Drawing.Point(446, 358);
+            this.BTN_CreateFolder.Name = "BTN_CreateFolder";
+            this.BTN_CreateFolder.Size = new System.Drawing.Size(115, 43);
+            this.BTN_CreateFolder.TabIndex = 9;
+            this.BTN_CreateFolder.Text = "Create Folder";
+            this.BTN_CreateFolder.UseVisualStyleBackColor = true;
+            this.BTN_CreateFolder.Click += new System.EventHandler(this.BTN_CreateFolder_Click);
+            // 
             // FolderMaker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 426);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.BTN_CreateFolder);
+            this.Controls.Add(this.TB_FolderName);
             this.Controls.Add(this.LB_FolderName);
             this.Controls.Add(this.GB_SubFolders);
             this.Controls.Add(this.CB_SubFolders);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TB_FolderAmount);
             this.Controls.Add(this.LB_NumberOfFolders);
             this.Controls.Add(this.BTN_FindLocation);
             this.Controls.Add(this.LB_FileDestination);
             this.Controls.Add(this.TB_FileDestination);
             this.Name = "FolderMaker";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folder Maker";
+            this.Load += new System.EventHandler(this.FolderMaker_Load);
             this.GB_SubFolders.ResumeLayout(false);
             this.GB_SubFolders.PerformLayout();
             this.ResumeLayout(false);
@@ -167,13 +181,14 @@
         private System.Windows.Forms.Label LB_FileDestination;
         private System.Windows.Forms.Button BTN_FindLocation;
         private System.Windows.Forms.Label LB_NumberOfFolders;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TB_FolderAmount;
         private System.Windows.Forms.CheckBox CB_SubFolders;
         private System.Windows.Forms.GroupBox GB_SubFolders;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TB_FolderName;
         private System.Windows.Forms.Label LB_FolderName;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TB_SubFolderName;
         private System.Windows.Forms.Label LB_SubFolderName;
+        private System.Windows.Forms.Button BTN_CreateFolder;
     }
 }
 
