@@ -11,10 +11,11 @@ using System.Windows.Forms;
 
 namespace FolderMaker
 {
-    public partial class FolderMaker : Form
+    public partial class FolderMaker : MaterialSkin.Controls.MaterialForm
     {
         public string folderPath = null;
         public string folderName = null;
+        public string newFolder = null;
         FolderBrowserDialog folder;
         public FolderMaker()
         {
@@ -54,7 +55,7 @@ namespace FolderMaker
                 }
 
                 folderName = TB_FolderName.Text;
-                string newFolder = folderPath + "\\" + folderName;
+                newFolder = folderPath + "\\" + folderName;
 
                 int fa = int.Parse(TB_FolderAmount.Text);
 
@@ -66,6 +67,15 @@ namespace FolderMaker
                         if (!Directory.Exists(newFolder))
                         {
                             Directory.CreateDirectory(newFolder);
+
+                            if (GB_SubFolders.Enabled)
+                            {
+                                string newSubfolder = newFolder + "\\" + TB_SubFolderName.Text;
+                                if (!Directory.Exists(newSubfolder))
+                                {
+                                    Directory.CreateDirectory(newSubfolder);
+                                }
+                            }
                         }
                         else
                         {
@@ -87,6 +97,8 @@ namespace FolderMaker
                         return;
                     }
                 }
+
+               
                
 
                 if(fa == 1) 
