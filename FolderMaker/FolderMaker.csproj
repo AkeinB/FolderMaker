@@ -56,10 +56,19 @@
     <Compile Include="FolderMaker.Designer.cs">
       <DependentUpon>FolderMaker.cs</DependentUpon>
     </Compile>
+    <Compile Include="FolderNames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FolderNames.Designer.cs">
+      <DependentUpon>FolderNames.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FolderMaker.resx">
       <DependentUpon>FolderMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FolderNames.resx">
+      <DependentUpon>FolderNames.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace FolderMaker
 {
@@ -59,6 +60,7 @@ namespace FolderMaker
 
                 int fa = int.Parse(TB_FolderAmount.Text);
 
+
                 if (fa > 1)
                 {
                     for (int i = 1; i <= fa; i++)
@@ -98,10 +100,7 @@ namespace FolderMaker
                     }
                 }
 
-               
-               
-
-                if(fa == 1) 
+                if (fa == 1) 
                 {
                     MessageBox.Show("Folder created successfully!");
                 }
@@ -109,7 +108,9 @@ namespace FolderMaker
                 {
                     MessageBox.Show("All Folders created successfully!");
                 }
-
+                var FormFolderName = new FolderNames(this);
+                FormFolderName.ShowDialog();
+                return;
             }
             catch (Exception)
             {
@@ -119,6 +120,10 @@ namespace FolderMaker
 
         }
 
+        public void CreateDirectory()
+        {
+
+        }
         private void FolderMaker_Load(object sender, EventArgs e)
         {
             TB_FolderName.Text = "New Folder";

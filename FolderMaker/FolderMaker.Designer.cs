@@ -72,7 +72,7 @@
             // LB_NumberOfFolders
             // 
             this.LB_NumberOfFolders.AutoSize = true;
-            this.LB_NumberOfFolders.Location = new System.Drawing.Point(12, 152);
+            this.LB_NumberOfFolders.Location = new System.Drawing.Point(12, 118);
             this.LB_NumberOfFolders.Name = "LB_NumberOfFolders";
             this.LB_NumberOfFolders.Size = new System.Drawing.Size(75, 13);
             this.LB_NumberOfFolders.TabIndex = 3;
@@ -80,7 +80,7 @@
             // 
             // TB_FolderAmount
             // 
-            this.TB_FolderAmount.Location = new System.Drawing.Point(111, 149);
+            this.TB_FolderAmount.Location = new System.Drawing.Point(111, 115);
             this.TB_FolderAmount.Name = "TB_FolderAmount";
             this.TB_FolderAmount.Size = new System.Drawing.Size(100, 20);
             this.TB_FolderAmount.TabIndex = 4;
@@ -125,7 +125,7 @@
             // 
             // TB_FolderName
             // 
-            this.TB_FolderName.Location = new System.Drawing.Point(111, 114);
+            this.TB_FolderName.Location = new System.Drawing.Point(111, 153);
             this.TB_FolderName.Name = "TB_FolderName";
             this.TB_FolderName.Size = new System.Drawing.Size(169, 20);
             this.TB_FolderName.TabIndex = 8;
@@ -133,7 +133,7 @@
             // LB_FolderName
             // 
             this.LB_FolderName.AutoSize = true;
-            this.LB_FolderName.Location = new System.Drawing.Point(12, 117);
+            this.LB_FolderName.Location = new System.Drawing.Point(12, 156);
             this.LB_FolderName.Name = "LB_FolderName";
             this.LB_FolderName.Size = new System.Drawing.Size(67, 13);
             this.LB_FolderName.TabIndex = 7;
